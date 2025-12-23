@@ -36,27 +36,16 @@ kotlin {
     }
 
     sourceSets {
-        val commonMain by getting {
-            dependencies {
-                implementation("org.jetbrains.kotlinx:kotlinx-io-core:0.3.0")
-                implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.7.3")
-            }
-        }
+        val commonMain by getting
+
         val commonTest by getting {
             dependencies {
                 implementation(kotlin("test"))
-                implementation("org.jetbrains.kotlinx:kotlinx-coroutines-test:1.7.3")
             }
         }
 
-        val jvmMain by getting {
-            dependencies {
-                implementation("org.apache.commons:commons-compress:1.24.0")
-            }
-        }
-
-        val nativeMain by getting { dependsOn(commonMain) }
-        val appleMain by creating { dependsOn(nativeMain) }
-        val macosArm64Main by creating { dependsOn(appleMain) }
+//        val nativeMain by getting { dependsOn(commonMain) }
+//        val appleMain by creating { dependsOn(nativeMain) }
+//        val macosArm64Main by creating { dependsOn(appleMain) }
     }
 }
