@@ -1,4 +1,4 @@
-rootProject.name = "kompress"
+rootProject.name = "squeeze"
 
 pluginManagement {
     dependencyResolutionManagement {
