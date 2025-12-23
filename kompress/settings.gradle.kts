@@ -3,9 +3,7 @@ rootProject.name = "kompress"
 pluginManagement {
     dependencyResolutionManagement {
         repositories {
-            mavenCentral()
+            gradlePluginPortal()
         }
     }
 }
-
-include("kompress")
