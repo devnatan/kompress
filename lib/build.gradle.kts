@@ -1,4 +1,6 @@
 import org.jetbrains.kotlin.gradle.plugin.mpp.KotlinNativeTarget
+import org.jmailen.gradle.kotlinter.tasks.FormatTask
+import org.jmailen.gradle.kotlinter.tasks.LintTask
 
 plugins {
     kotlin("multiplatform") version "2.3.0"
@@ -99,6 +101,18 @@ benchmark {
     }
 }
 
-tasks.check {
-    dependsOn("installKotlinterPrePushHook")
+val File.isGeneratedFile: Boolean get() = path.contains("${File.separator}generated${File.separator}")
+
+tasks {
+    check {
+        dependsOn("installKotlinterPrePushHook")
+    }
+
+    withType<LintTask> {
+        exclude { it.file.isGeneratedFile }
+    }
+
+    withType<FormatTask> {
+        exclude { it.file.isGeneratedFile }
+    }
 }

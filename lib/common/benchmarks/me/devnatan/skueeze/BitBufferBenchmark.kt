@@ -20,8 +20,8 @@ const val SAMPLE_SIZE = 1000
 @Measurement(iterations = 10, time = 1, timeUnit = BenchmarkTimeUnit.SECONDS)
 @BenchmarkMode(Mode.Throughput)
 @OutputTimeUnit(BenchmarkTimeUnit.MILLISECONDS)
+@Suppress("ktlint:standard:function-naming", "detekt.FunctionNaming")
 class BitBufferBenchmark {
-
     private lateinit var buffer: BitBuffer
     private var randomData: UIntArray = UIntArray(SAMPLE_SIZE)
     private var randomByteLengths: IntArray = IntArray(SAMPLE_SIZE)
