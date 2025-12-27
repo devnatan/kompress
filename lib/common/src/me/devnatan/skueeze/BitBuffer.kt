@@ -1,4 +1,4 @@
-package me.devnatan.kompress
+package me.devnatan.skueeze
 
 /** Internally manages a 32-bit buffer and tracks how many bits are currently stored. */
 internal class BitBuffer {

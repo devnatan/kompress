@@ -1,20 +1,6 @@
-package me.devnatan.kompress
+package me.devnatan.skueeze
 
 import kotlin.math.abs
-
-public object Kompress {
-}
-
-// TODO Incremental compression and decompression
-public interface CompressionAlgorithm {
-
-    public fun compress(
-        input: ByteArray,
-        level: CompressionLevel = CompressionLevel.DEFAULT
-    ): ByteArray
-
-    public fun decompress(input: ByteArray): ByteArray
-}
 
 public enum class CompressionLevel(private val value: Int) {
 

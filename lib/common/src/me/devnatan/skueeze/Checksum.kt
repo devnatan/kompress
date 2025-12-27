@@ -1,4 +1,4 @@
-package me.devnatan.kompress
+package me.devnatan.skueeze
 
 internal object Checksum {
 
