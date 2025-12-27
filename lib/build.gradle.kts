@@ -7,6 +7,7 @@ plugins {
     id("org.jetbrains.kotlin.plugin.allopen") version "2.3.0"
     id("org.jetbrains.kotlinx.benchmark") version "0.4.15"
     id("org.jmailen.kotlinter") version "5.3.0"
+    id("io.gitlab.arturbosch.detekt") version "1.23.8"
 }
 
 group = "me.devnatan"
